@@ -30,5 +30,37 @@ java studentGrade
 Input: 80 70 90 85 75
 Output: Total: 400, Percentage: 80.0%, Grade: B
 
+# Day 03 - Number Guessing Game
+
+## What I Built
+A Java console game where user guesses a secret number (1-100) with hints
+
+## Concepts Used
+- `Random` class - to generate secret number
+- `Scanner` - user input
+- `while(true)` + `break` - infinite loop until correct guess
+- `if-else` - high/low hints
+-  Counter - attempt tracking
+
+## How to Run
+```bash
+javac NumberGame.java
+java NumberGame
+
+Guess (1-100): 50
+Too low!
+Guess (1-100): 75
+Too high!
+Guess (1-100): 63
+Correct! Attempts: 3
+Secret number 63 is not Prime
+
+## What I Learned
+- Used Random to get number 1 to 100
+- Used Scanner to take user guess
+- Used while loop with break to keep guessing
+- Used if-else for high/low hints
+- Counted attempts
+
 ### Goal
 30 projects before 25th Nov
