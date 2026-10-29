@@ -8,35 +8,48 @@ Complete 30 Projects before 25th Nov 2026
 ---
 
 ### Day 01: Calculator
-Simple calculator using methods.
-- Features: Add, Subtract, Multiply, Divide, GCD
-- File: `Calculator.java`
 
-### How to Run
+#### About
+Simple calculator using methods for basic operations.
+
+#### Working
+1. Takes two numbers from user
+2. Shows menu for Add/Sub/Mul/Div/GCD
+3. Calls respective method
+4. Returns result
+
+#### How to Run
 javac Calculator.java
 java Calculator
+
+#### Test Example
+Input: a=10 b=5, Choice=Add
+Output: Result = 15
 
 ---
 
 ### Day 02: Student Grade Calculator
-Java program that takes 5 subject marks and gives total, percentage and grade.
+
+#### About
+Takes 5 subject marks and gives total, percentage and grade.
+
+#### Working
+1. Loop 5 times to take marks using Scanner
+2. Calculate total = sum of all 5
+3. Calculate percentage = (total / 500.0) * 100
+4. Use if-else to assign grade
 
 #### What I Learned
-- Why `total / 500` gives 0% and `total / 500.0` gives correct 80% (int vs double division)
-- Using while loop to take 5 inputs
-- if-else for grading
+- total / 500 = 0 (int division), total / 500.0 = 80.0 (double division)
 
 #### Grade Logic
-- 90+ = A
-- 75+ = B
-- 60+ = C
-- Below 60 = Fail
+- 90+ = A, 75+ = B, 60+ = C, Below 60 = Fail
 
 #### How to Run
 javac StudentGrade.java
 java StudentGrade
 
-#### Test Case
+#### Test Example
 Input: 80 70 90 85 75
 Output: Total: 400, Percentage: 80.0%, Grade: B
 
@@ -44,64 +57,64 @@ Output: Total: 400, Percentage: 80.0%, Grade: B
 
 ### Day 03: Number Guessing Game
 
-#### What I Built
-A Java console game where user guesses a secret number (1-100) with hints.
+#### About
+Console game where user guesses secret number 1-100.
 
-#### Concepts Used
-- `Random` class - to generate secret number
-- `Scanner` - user input
-- `while(true)` + `break` - infinite loop until correct guess
-- `if-else` - high/low hints
-- Counter - attempt tracking
+#### Working
+1. Generate random number using Random class
+2. Start while(true) loop
+3. Take user guess
+4. If guess < secret -> print Too low
+5. If guess > secret -> print Too high
+6. If guess == secret -> print Correct and break loop
 
 #### How to Run
 javac NumberGame.java
 java NumberGame
 
-#### Sample Output
-Guess (1-100): 50
-Too low!
-Guess (1-100): 75
-Too high!
-Guess (1-100): 63
-Correct! Attempts: 3
-
-#### What I Learned
-- Used Random to get number 1 to 100
-- Used Scanner to take user guess
-- Used while loop with break to keep guessing
-- Used if-else for high/low hints
-- Counted attempts
+#### Test Example
+Secret: 63
+Guess: 50 -> Too low!
+Guess: 75 -> Too high!
+Guess: 63 -> Correct! Attempts: 3
 
 ---
 
 ### Day 04: ATM Simulation System
-#### JAVA CONSOLE PROJECT
 
-#### About Project
-Simple console-based ATM Simulation. Performs basic ATM operations like Check Balance, Deposit and Withdraw. Made for learning Core Java basics.
+#### About
+Simple ATM with Check Balance, Deposit, Withdraw.
 
-#### Features
-* Check Balance
-* Deposit Money
-* Withdraw Money with Balance Validation
-* Exit Option
-
-#### Technology Used
-* Language: Java
-* Concepts: Scanner, if-else, while loop, Methods, static keyword
+#### Working
+1. Initial balance = 1000.0 (static variable)
+2. while(true) loop shows menu
+3. Choice 1 -> checkBalance() method shows balance
+4. Choice 2 -> deposite() adds amount to balance (balance += amt)
+5. Choice 3 -> Withdraw() subtracts if amt <= balance else Insufficient
+6. Choice 4 -> break loop and exit
 
 #### How to Run
 javac ATM.java
 java ATM
 
-#### Why Static Used?
-Because main() is static in Java. Static method can only access static data directly. So balance and Scanner are made static to use without creating object.
+#### Test Example
+Choose: 1
+Output: Your Balance: 1000.0
 
-#### Future Scope
-* Add PIN Verification
-* Make OOP version without static
-* Add Transaction History
+Choose: 2, Enter: 500
+Output: Deposited: 500.0
+
+Choose: 1
+Output: Your Balance: 1500.0
+
+Choose: 3, Enter: 300
+Output: Withdrawn: 300.0
+
+Choose: 1
+Output: Your Balance: 1200.0
+
+Choose: 4
+Output: Bye!
 
 ---
 
